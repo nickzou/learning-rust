@@ -33,6 +33,11 @@ video url: https://youtu.be/rQ_J9WH6CGk?si=uReG1P6X4ODyNTdu
 - Strings are growable (expandable) and mutable, owned
 - Strings are allocated on the heap
 - this is done at runtime
+- String slice is stored on the stack
+- `&str` is a reference (string slice), not a known string
+- string slices are immutable
+- string slices are used to reference string literals, substrings, string objects without needed to copy or move the data
+- efficient, use when you do not need ownership of the string
 
 ## Stuff to Remember
 - `println!` requires `!` (it's a macro)
